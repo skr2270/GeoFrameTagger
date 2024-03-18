@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+<body>
+<%- include('partials/_header.ejs') %>
+<main role="main" class="container mt-4">
+  <h2>Upload Video and SRT Files</h2>
+  <form action="/api/upload" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="videoFile" class="form-label">Video File</label>
+      <input class="form-control" type="file" id="videoFile" name="videoFile" required>
+    </div>
+    <div class="mb-3">
+      <label for="srtFile" class="form-label">SRT File</label>
+      <input class="form-control" type="file" id="srtFile" name="srtFile" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</main>
+<%- include('partials/_footer.ejs') %>
+</body>
+</html>
